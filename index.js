@@ -27,7 +27,9 @@ client.on(Events.MessageCreate, async message => {
         new ButtonBuilder().setCustomId("gag").setLabel("Grow a Garden").setStyle(ButtonStyle.Success),  
         new ButtonBuilder().setCustomId("pvb").setLabel("Plants V Brainrots").setStyle(ButtonStyle.Success),  
         new ButtonBuilder().setCustomId("sab").setLabel("Steal A Brainrot").setStyle(ButtonStyle.Success),  
-        new ButtonBuilder().setCustomId("mm2").setLabel("Murder Mystery 2").setStyle(ButtonStyle.Success)  
+        new ButtonBuilder().setCustomId("mm2").setLabel("Murder Mystery 2").setStyle(ButtonStyle.Success),  
+        new ButtonBuilder().setCustomId("bladeball").setLabel("Blade Ball").setStyle(ButtonStyle.Success),  
+        new ButtonBuilder().setCustomId("petsim99").setLabel("Pet Simulator 99").setStyle(ButtonStyle.Success)  
     );  
 
     await message.channel.send({ embeds: [embed], components: [row] });
@@ -39,11 +41,10 @@ client.on(Events.InteractionCreate, async interaction => {
     const priceLists = {  
         gag: `## Grow a garden updated market!!
 
- 🎁 Cheapest Pets on the market
+> 🎁 Cheapest Pets on the market
+🛒 Fast and Reliable Delivery
 
-🛒  Fast and Reliable Delivery
-
- <:headlesshorseman:1427271915940347904> Headless Horseman= 4$ USD or 1500 <:robux:1451660351643844691>
+> <:headlesshorseman:1427271915940347904> Headless Horseman= 4$ USD or 1500 <:robux:1451660351643844691>
 <:elephant:143501679924137178> Elephant = $5 USD or 1800 <:robux:1451660351643844691>
 <:tiger:1427271972647338006> Tiger = 4$ USD or 1100 <:robux:1451660351643844691>
 <:goldengoose:1420149676111433788> Golden Goose = 4$ USD or 1100 <:robux:1451660351643844691>
@@ -60,55 +61,41 @@ client.on(Events.InteractionCreate, async interaction => {
 <:Raccoon:1419962353809887254> Raccoon = 10$ USD or 3000 <:robux:1451660351643844691>
 <:rubyoctopus:1442183157502972074> Ruby Squid = 4$ USD or 1100 <:robux:1451660351643844691>
 
- 🪙 1,000 Tokens = $14 USD or
+> 🪙 1,000 Tokens = $14 USD or
 🪙 10,000 Tokens = $100 USD
 
- We can get you any item, just make a ticket and ask for the price
+> We can get you any item, just make a ticket and ask for the price
 
-To buy create a ticket <#1434980325142036530>`,
+> To buy create a ticket <#1434980325142036530>`,
 
-        pvb: `## Plants vs Brainrots updated market!! #
+        pvb: `## Plants vs Brainrots updated market!! 
 
- 🎁   Cheapest Pets on the market
-
+🎁   Cheapest Pets on the market
 🛒   Fast and Reliable Delivery
 
- <:kinglimone:1430263097196675072> 5 King Limone - $3 USD or 1200 <:robux:1451660351643844691>
-<:kinglimone:1430263097196675072> 10 King Limone - $5 USD or 2000 <:robux:1451660351643844691>
-<:kinglimone:1430263097196675072> 35 King Limone - $16 USD or 5500 <:robux:1451660351643844691>
+<:kinglimone:1430263097196675072> 3 King Limone - $1 USD 
+<:kinglimone:1430263097196675072> 15 King Limone - $4 USD 
+<:kinglimone:1430263097196675072> 50 King Limone - $10 USD 
 💠 Random DPS
 
- <:mango:1425129793967493224> 5 Mango - $2 USD or 800 <:robux:1451660351643844691>
-<:mango:1425129793967493224> 10 Mango - $3 USD or 1500 <:robux:1451660351643844691>
-<:mango:1425129793967493224> 35 Mango - $7 USD or 3000 <:robux:1451660351643844691>
-💠 Random DPS
+<:trollmango:1435008353783775374> Troll Mango - $10 USD
+🥑 Avocado - $17
+🌺 Glacial Lily - $10
 
- <:shroombinoo:1425097607981695058> 5 Shroombino - $2 USD or 600 <:robux:1451660351643844691>
-<:shroombinoo:1425097607981695058> 10 Shroombino - $3 USD or 800 <:robux:1451660351643844691>
-<:shroombinoo:1425097607981695058> 35 Shroombino - $6 USD or 2000 <:robux:1451660351643844691>
-💠 Random DPS
+🌲 100k-200k DPS Plant - $3 USD
+🌲 300k-400k DPS Plant - $5 USD
+🌲8-11M DPS Plant - $15 USD
 
-<:tomatrio:1425127902759878666> 10 Tomatrio - $2 USD or 300 <:robux:1451660351643844691>
-<:tomatrio:1425127902759878666> 35 Tomatrio - $4 USD or 750 <:robux:1451660351643844691>
-💠 Random DPS
-
- <:mrcarrot:1425129345176961175> 15 Mr Carrot - $2 USD or 800 <:robux:1451660351643844691>
-<:mrcarrot:1425129345176961175> 35 Mr Carrot - $4 USD or 1500 <:robux:1451660351643844691>
-💠 Random DPS
-
- 🌲8-11M DPS Hollow Tree - $15 USD or 4000 <:robux:1451660351643844691>
-⭐ Star Fruit - $1 USD or 300 <:robux:1451660351643844691>
-
- We can get you any item in-game - just create a ticket and ask for the price
+We can get you any item in-game - just create a ticket and ask for the price
 
 Create a ticket <#1434980325142036530> to buy`,
 
         sab: `## Steal A Brainrot updated market!!!
 
-• 🛒 Fast and Reliable Delivery
+> • 🛒 Fast and Reliable Delivery
 • 🔗 200+ proofs & vouches
 
-Strawberry Elephant = $900 USD
+> Strawberry Elephant = $900 USD
 Meowl = $690 USD
 Dragon Cannelloni = $95 USD
 Garama & Madundung = $25 USD
@@ -126,16 +113,16 @@ Money Reindeer = $5 USD
 Spaghetti Tualetti = $12 USD
 Spooky & Pumpky = $24
 
- We can get you any brainrot even if it's not listed - just create a ticket and ask for the price
+> We can get you any brainrot even if it's not listed - just create a ticket and ask for the price
 
-We can also get you any of these items with traits so they can make more money`,
+> We can also get you any of these items with traits so they can make more money`,
 
         mm2: `## Murder Mystery 2 updated market!!!
 
- • 🛒 Fast and Reliable Delivery
+> • 🛒 Fast and Reliable Delivery
 • 🔗 200+ Proofs and Vouches
 
-Gingerscope = $198 USD
+> Gingerscope = $198 USD
 Traveler's Set = $170 USD
 Luger = $5 USD
 Celestial Set = $70 USD
@@ -158,7 +145,33 @@ Ornament = $2 USD
 Bat = $6 USD
 Candy Set = $7 USD
 
-We can get you any weapon - just ask for the price. We also sell half sets`
+> We can get you any weapon - just ask for the price. We also sell half sets`,
+
+        bladeball: `## Blade Ball updated market!!!
+🛒 Fast and Reliable Delivery 
+🔗 200+ Proofs and Vouches
+
+__🪙Tokens__
+1K+ Tokens = $7.5/1k
+10K+ Tokens = $6/1k
+100K+ Tokens = $5/1k
+
+We can get you any amount of tokens, create a ticket and select the amount you need`,
+
+        petsim99: `## Pet simulator 99 updated market!!!
+🛒 Fast and Reliable Delivery
+🔗 200+ Proofs and Vouches
+
+__💎Gems__
+1B+ Gems = $4/1b 
+10B+ Gems = $3/1b
+100B+ Gems = $2.5/1b
+
+__🐶Titanics__
+Titanics = $3.5/1b RAP
+(Random Titanics)
+
+We can get you any amount of gems or RAP, create a ticket and select the amount you need`
     };
 
     await interaction.reply({ content: priceLists[interaction.customId], ephemeral: true });
